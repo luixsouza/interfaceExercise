@@ -1,18 +1,29 @@
-## Getting Started
+# Contract Payment Processor
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este projeto é uma aplicação Java para processar contratos com base em pagamentos parcelados. Ele permite calcular as parcelas de um contrato usando um serviço de pagamento configurável, como o PayPal.
 
-## Folder Structure
+## 📋 Funcionalidades
 
-The workspace contains two folders by default, where:
+- Entrada de dados do contrato, incluindo número, data e valor total.
+- Configuração do número de parcelas para o pagamento.
+- Processamento e exibição das parcelas calculadas com juros aplicados.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 🛠️ Tecnologias Utilizadas
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- **Java**: Linguagem de programação principal.
+- **Java.time**: Para manipulação de datas.
+- **POO (Programação Orientada a Objetos)**: Estrutura de classes para organizar as entidades e serviços.
+- **Integração com serviços de pagamento**: Serviço PayPal configurado como exemplo.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## 📂 Estrutura do Projeto
 
-## Dependency Management
+O projeto está dividido em pacotes para melhor organização:
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- `entities`: Contém as classes principais do modelo de domínio, como `Contract` e `Installment`.
+- `services`: Contém os serviços de processamento e lógica de negócios, como `ContractService` e `PaypalService`.
+- `application`: Contém o ponto de entrada do programa (`App`).
+
+### Exemplo Visual
+Abaixo está uma captura de tela do resultado gerado pela aplicação:
+
+![Resultado](src/assets/result.png)
